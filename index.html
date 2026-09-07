@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Syeda Azka Qadir — AI researcher and engineer working across machine learning, computer vision, multimodal AI, LLM evaluation, and production ML systems." />
+  <meta name="theme-color" content="#171816" />
+  <title>Syeda Azka Qadir | AI Research & Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root {
+  --charcoal: #171816;
+  --charcoal-2: #1f211e;
+  --charcoal-3: #262824;
+  --ink: #f0ece3;
+  --muted: #aaa79d;
+  --line: #3b3d37;
+  --copper: #c9784b;
+  --copper-soft: #9c5e3d;
+  --olive: #80886a;
+  --paper: #ddd7cb;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--charcoal);
+  color: var(--ink);
+  font-family: Manrope, Arial, sans-serif;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+::selection { background: var(--copper); color: var(--charcoal); }
+.shell { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(23, 24, 22, .94);
+  backdrop-filter: blur(12px);
+}
+.brand {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: var(--charcoal);
+  text-decoration: none;
+  font: 500 13px DM Mono, monospace;
+}
+nav { display: flex; gap: 28px; }
+nav a, .header-link { font-size: 13px; text-decoration: none; color: var(--paper); }
+nav a:hover, .header-link:hover, .footer-links a:hover { color: var(--copper); }
+.header-link { justify-self: end; }
+.hero { padding: 105px 0 80px; }
+.hero-kicker, .eyebrow, .section-head p, .time {
+  font: 500 11px DM Mono, monospace;
+  letter-spacing: .12em;
+  color: var(--copper);
+}
+h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: .98;
+  letter-spacing: -.055em;
+  max-width: 1080px;
+  margin: 24px 0 52px;
+  font-weight: 600;
+  color: var(--ink);
+}
+h1 span { color: var(--copper); }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 90px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.hero-copy { font-size: 19px; max-width: 700px; margin: 0; color: var(--paper); }
+.hero-meta { display: grid; gap: 15px; }
+.hero-meta div { display: grid; grid-template-columns: 105px 1fr; gap: 10px; }
+.hero-meta span { color: var(--muted); font-size: 12px; }
+.hero-meta strong { font-size: 13px; font-weight: 600; color: var(--ink); }
+.hero-actions { display: flex; gap: 10px; margin-top: 38px; }
+.button {
+  border: 1px solid var(--paper);
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: .2s ease;
+}
+.button:hover { border-color: var(--copper); color: var(--copper); }
+.button.primary { background: var(--ink); color: var(--charcoal); border-color: var(--ink); }
+.button.primary:hover { background: var(--copper); border-color: var(--copper); color: var(--charcoal); }
+.signal-strip {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 15px 20px;
+  background: var(--charcoal-3);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--paper);
+  font: 400 10px DM Mono, monospace;
+  letter-spacing: .08em;
+}
+.signal-strip div::before { content: "•"; color: var(--olive); margin-right: 8px; }
+.section { padding: 90px 0; border-bottom: 1px solid var(--line); }
+.section-head { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-bottom: 46px; }
+.section-head h2 {
+  font-size: clamp(30px,4vw,52px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink);
+}
+.section-head p { margin: 8px 0 0; }
+.project.featured {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  border-top: 1px solid var(--paper);
+  border-bottom: 1px solid var(--paper);
+  padding: 30px 0;
+  margin-bottom: 24px;
+}
+.project-index { font: 400 32px DM Mono, monospace; color: var(--copper); }
+.project-body h3, .project-card h3 {
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  margin: 8px 0 14px;
+  color: var(--ink);
+}
+.project-body p { max-width: 850px; font-size: 16px; color: var(--paper); }
+.metrics { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0; }
+.metrics span { border: 1px solid var(--line); padding: 8px 10px; font: 400 11px DM Mono, monospace; color: var(--paper); }
+.metrics b { color: var(--ink); }
+.metrics.compact { margin: 18px 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tags span {
+  background: var(--charcoal-3);
+  border: 1px solid #31332f;
+  padding: 6px 9px;
+  font: 400 10px DM Mono, monospace;
+  color: #c9c4b8;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.project-card {
+  min-height: 390px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  background: #1a1b19;
+}
+.project-card p { color: #c5c0b4; }
+.project-card .tags { margin-top: auto; padding-top: 18px; }
+.project-card > a {
+  margin-top: 20px;
+  font: 500 12px DM Mono, monospace;
+  text-decoration: none;
+  color: var(--copper);
+}
+.project-card > a:hover { color: #e49a6c; }
+.muted-card { background: var(--charcoal-2); }
+.split-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
+.split-section .section-head { display: block; }
+.split-section .section-head h2 { margin-top: 18px; }
+.timeline article { border-top: 1px solid var(--paper); padding: 25px 0 40px; }
+.timeline h3 { font-size: 27px; margin: 8px 0 0; color: var(--ink); }
+.timeline h4 { margin: 2px 0 16px; color: var(--copper); font-weight: 500; }
+.timeline p { max-width: 650px; color: #c5c0b4; }
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.skill-grid > div {
+  min-height: 190px;
+  padding: 25px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #191a18;
+}
+.skill-grid > div:nth-child(2n) { background: var(--charcoal-2); }
+.skill-grid h3 { font-size: 17px; margin: 0 0 18px; color: var(--ink); }
+.skill-grid p { font: 400 12px/1.8 DM Mono, monospace; color: #b8b3a8; }
+.about-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 90px; }
+.about-grid > p { font-size: 20px; margin: 0; color: var(--paper); }
+.education { display: grid; gap: 24px; }
+.education div { border-top: 1px solid var(--paper); padding-top: 14px; display: grid; }
+.education span { font: 400 10px DM Mono, monospace; color: var(--copper); }
+.education strong { font-size: 17px; margin: 5px 0 2px; color: var(--ink); }
+.education small { color: var(--muted); }
+.site-footer {
+  min-height: 230px;
+  padding: 45px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.site-footer > div:first-child { display: grid; }
+.site-footer span, .site-footer p { color: var(--muted); font-size: 12px; }
+.site-footer strong { color: var(--ink); }
+.footer-links { display: flex; gap: 22px; justify-content: flex-end; }
+.footer-links a { font-size: 13px; text-decoration: none; color: var(--paper); }
+.site-footer p { grid-column: 1/-1; align-self: end; }
+@media (max-width: 780px) {
+  .site-header { grid-template-columns: auto 1fr; }
+  nav { display:none; }
+  .header-link { justify-self:end; }
+  .shell { width:min(100% - 28px,1160px); }
+  .hero { padding:70px 0 55px; }
+  h1 { font-size: 50px; }
+  .hero-grid, .section-head, .split-section, .about-grid { grid-template-columns:1fr; gap:25px; }
+  .project-grid, .skill-grid { grid-template-columns:1fr; }
+  .project.featured { grid-template-columns:1fr; gap:15px; }
+  .project-card { min-height:auto; }
+  .signal-strip { justify-content:flex-start; white-space:nowrap; overflow:auto; }
+  .site-footer { grid-template-columns:1fr; }
+  .footer-links { justify-content:flex-start; }
+}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Home">AQ</a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-link" href="https://github.com/AzkaQadir" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-kicker">AI RESEARCH · ML ENGINEERING · MULTIMODAL SYSTEMS</div>
+      <h1>Building AI systems that are <span>measurable, useful,</span> and engineered beyond the notebook.</h1>
+      <div class="hero-grid">
+        <p class="hero-copy">I’m <strong>Syeda Azka Qadir</strong>, an MS Artificial Intelligence student at NUST Islamabad. My work spans model evaluation, computer vision, multimodal learning, LLMs, dataset development, and production oriented ML services.</p>
+        <div class="hero-meta">
+          <div><span>Based in</span><strong>Rawalpindi, Pakistan</strong></div>
+          <div><span>Current focus</span><strong>AI evaluation + engineering</strong></div>
+          <div><span>Open to</span><strong>AI / ML research & engineering</strong></div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="#work">View selected work</a>
+        <a class="button" href="https://linkedin.com/in/azka-qadir-b8a0a020b" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-label="Areas of work">
+      <div>VISION LANGUAGE EVALUATION</div><div>FASTAPI MODEL SERVING</div><div>MULTIMODAL LEARNING</div><div>QUANTIZED LLMS</div><div>OBJECT DETECTION</div>
+    </section>
+
+    <section id="work" class="section shell">
+      <div class="section-head">
+        <p>01 / SELECTED WORK</p>
+        <h2>Research depth with an engineering edge.</h2>
+      </div>
+
+      <article class="project featured">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <div class="eyebrow">MS THESIS · IN PROGRESS</div>
+          <h3>NLG Evaluation for Vision Language Models</h3>
+          <p>Developing evaluation methods for object physical state descriptions generated by vision language models. Built OSDD ext, a 1,500 image benchmark with spatial relations and an authored annotation schema. Proposed State F1 to measure state term faithfulness where conventional text overlap metrics can miss incorrect state information.</p>
+          <div class="metrics"><span>Cohen’s κ <b>0.85</b></span><span>State F1 baseline <b>0.96</b></span><span>1,500 images</span></div>
+          <div class="tags"><span>VLM Evaluation</span><span>Benchmark Design</span><span>Custom Metrics</span><span>Flan T5</span></div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="eyebrow">AI ENGINEERING · IN PROGRESS</div>
+          <h3>VisionServe</h3>
+          <p>A production oriented computer vision inference API that serves YOLO through FastAPI with validation, structured responses, latency measurement, lifecycle based model loading, and automated tests. PostgreSQL persistence is the current development phase.</p>
+          <div class="tags"><span>FastAPI</span><span>YOLO</span><span>PyTorch</span><span>pytest</span></div>
+          <a href="https://github.com/AzkaQadir/visionserve" target="_blank" rel="noreferrer">Repository ↗</a>
+        </article>
+
+        <article class="project-card">
+          <div class="eyebrow">MULTIMODAL AI</div>
+          <h3>Fallacy Detection in Political Debates</h3>
+          <p>Fused WavLM audio representations with RoBERTa text embeddings to detect and classify argumentative fallacies. Evaluated text and multimodal configurations and ran ablations on the contribution of audio.</p>
+          <div class="metrics compact"><span>Detection F1 <b>0.90</b></span><span>6 class F1 <b>0.65</b></span></div>
+          <div class="tags"><span>WavLM</span><span>RoBERTa</span><span>Fusion</span><span>PyTorch</span></div>
+          <a href="https://github.com/AzkaQadir/multimodal-fallacy-detection" target="_blank" rel="noreferrer">Repository ↗</a>
+        </article>
+
+        <article class="project-card">
+          <div class="eyebrow">LLMS · BIOMEDICAL QA</div>
+          <h3>BioASQ 14b Phase B</h3>
+          <p>Built a prompt based biomedical QA system with 4 bit Mistral 7B Instruct on a single T4 GPU. Implemented type specific answer handling, schema validation, ROUGE 2 and ROUGE SU4, plus controlled few shot ablations.</p>
+          <div class="metrics compact"><span>Yes/no macro F1 <b>0.9549</b></span><span>No fine tuning</span></div>
+          <div class="tags"><span>Mistral 7B</span><span>4 bit</span><span>Prompting</span><span>Evaluation</span></div>
+          <a href="https://github.com/AzkaQadir/bioasq14b-phaseB" target="_blank" rel="noreferrer">Repository ↗</a>
+        </article>
+
+        <article class="project-card muted-card">
+          <div class="eyebrow">RAG · SPEECH · RETRIEVAL</div>
+          <h3>MeetMind</h3>
+          <p>Meeting intelligence pipeline combining Whisper transcription, Pyannote diarization, emotion analysis, LLM action item extraction, and a LangChain and ChromaDB based RAG chatbot.</p>
+          <div class="tags"><span>RAG</span><span>Whisper</span><span>ChromaDB</span><span>LangChain</span></div>
+          <a href="https://github.com/AzkaQadir/MeetMind" target="_blank" rel="noreferrer">Repository ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section shell split-section">
+      <div class="section-head sticky-head"><p>02 / EXPERIENCE</p><h2>Applied research and practical AI.</h2></div>
+      <div class="timeline">
+        <article>
+          <div class="time">JUN 2025 · JUL 2025</div>
+          <h3>Research Intern</h3>
+          <h4>The Neuron Gorge</h4>
+          <p>Benchmarked five YOLO variants on BDD100K under controlled training configurations. YOLOv11l reached mAP@0.5 of 0.58 and precision of 0.75. Applied Mosaic, MixUp, and CutMix for reproducible cross model comparison.</p>
+        </article>
+        <article>
+          <div class="time">JUL 2025 · SEP 2025</div>
+          <h3>AI Intern</h3>
+          <h4>Software Productivity Strategists, Inc.</h4>
+          <p>Worked with IBM Watsonx Assistant concepts including conversational AI design, Actions based dialog flows, LLM powered search, and custom API extensions on enterprise cloud infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section shell">
+      <div class="section-head"><p>03 / CAPABILITIES</p><h2>A broad AI toolkit, organized around what I build.</h2></div>
+      <div class="skill-grid">
+        <div><h3>Machine Learning</h3><p>Python · PyTorch · TensorFlow · Scikit learn · Transformers · GNNs · transfer learning · preprocessing · class imbalance handling</p></div>
+        <div><h3>LLMs & Multimodal</h3><p>RAG · LangChain · ChromaDB · Sentence Transformers · quantized inference · CLIP · VideoLLaMA2 · RoBERTa · WavLM · Whisper · Pyannote</p></div>
+        <div><h3>Computer Vision</h3><p>OpenCV · YOLOv5 · YOLOv8 · YOLOv11 · object detection · image processing · classification · Grad CAM · Mosaic · MixUp · CutMix</p></div>
+        <div><h3>Evaluation</h3><p>Benchmark design · annotation schema design · custom metrics · ablation studies · statistical evaluation · Cohen’s kappa · ROUGE · model evaluation</p></div>
+        <div><h3>Engineering</h3><p>FastAPI · REST APIs · Git · Docker · Linux · pytest · Hugging Face Spaces · Gradio · Streamlit · Pandas · NumPy</p></div>
+        <div><h3>Edge Exposure</h3><p>NVIDIA Jetson Nano · TensorRT · PyCUDA</p></div>
+      </div>
+    </section>
+
+    <section id="about" class="section shell about">
+      <div class="section-head"><p>04 / ABOUT</p><h2>Interested in the point where model quality meets real world reliability.</h2></div>
+      <div class="about-grid">
+        <p>My work moves between research questions and implementation. I enjoy designing evaluations, studying model behaviour, building datasets, and turning models into systems that can be tested and used. I am especially interested in reliable AI evaluation, multimodal systems, computer vision, and practical ML engineering.</p>
+        <div class="education">
+          <div><span>Current</span><strong>MS Artificial Intelligence</strong><small>NUST Islamabad · Expected 2026</small></div>
+          <div><span>Previous</span><strong>BS Computer Science</strong><small>UET Taxila · 2019 to 2023</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div><strong>Syeda Azka Qadir</strong><span>AI Research & Engineering</span></div>
+    <div class="footer-links"><a href="https://github.com/AzkaQadir" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/azka-qadir-b8a0a020b" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+    <p>Built as a lightweight static portfolio.</p>
+  </footer>
+</body>
+</html>

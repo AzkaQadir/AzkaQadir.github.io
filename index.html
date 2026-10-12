@@ -4,23 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Syeda Azka Qadir — AI researcher and engineer working across machine learning, computer vision, multimodal AI, LLM evaluation, and production ML systems." />
-  <meta name="theme-color" content="#171816" />
+  <meta name="theme-color" content="#f4f4f1" />
   <title>Syeda Azka Qadir | AI Research & Engineering</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
 :root {
-  --charcoal: #171816;
-  --charcoal-2: #1f211e;
-  --charcoal-3: #262824;
-  --ink: #f0ece3;
-  --muted: #aaa79d;
-  --line: #3b3d37;
-  --copper: #c9784b;
-  --copper-soft: #9c5e3d;
-  --olive: #80886a;
-  --paper: #ddd7cb;
+  --charcoal: #f5f5f2;
+  --charcoal-2: #eeefeb;
+  --charcoal-3: #e7e9e4;
+  --ink: #252923;
+  --muted: #73786f;
+  --line: #d8dbd4;
+  --copper: #788875;
+  --copper-soft: #657561;
+  --olive: #879582;
+  --paper: #555b53;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -33,7 +33,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 a { color: inherit; }
-::selection { background: var(--copper); color: var(--charcoal); }
+::selection { background: #dce4d8; color: #252923; }
 .shell { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
 .site-header {
   position: sticky;
@@ -44,7 +44,7 @@ a { color: inherit; }
   align-items: center;
   padding: 18px 24px;
   border-bottom: 1px solid var(--line);
-  background: rgba(23, 24, 22, .94);
+  background: rgba(245, 245, 242, .94);
   backdrop-filter: blur(12px);
 }
 .brand {
@@ -52,8 +52,8 @@ a { color: inherit; }
   height: 38px;
   display: grid;
   place-items: center;
-  background: var(--ink);
-  color: var(--charcoal);
+  background: #e5e8e1;
+  color: var(--ink);
   text-decoration: none;
   font: 500 13px DM Mono, monospace;
 }
@@ -98,8 +98,8 @@ h1 span { color: var(--copper); }
   transition: .2s ease;
 }
 .button:hover { border-color: var(--copper); color: var(--copper); }
-.button.primary { background: var(--ink); color: var(--charcoal); border-color: var(--ink); }
-.button.primary:hover { background: var(--copper); border-color: var(--copper); color: var(--charcoal); }
+.button.primary { background: #dfe5dc; color: #252923; border-color: #cbd4c7; }
+.button.primary:hover { background: #cbd7c6; border-color: #b9c7b4; color: #252923; }
 .signal-strip {
   overflow: hidden;
   display: flex;
@@ -149,10 +149,10 @@ h1 span { color: var(--copper); }
 .tags { display: flex; flex-wrap: wrap; gap: 7px; }
 .tags span {
   background: var(--charcoal-3);
-  border: 1px solid #31332f;
+  border: 1px solid #d9ddd5;
   padding: 6px 9px;
   font: 400 10px DM Mono, monospace;
-  color: #c9c4b8;
+  color: #596056;
 }
 .project-grid {
   display: grid;
@@ -167,9 +167,9 @@ h1 span { color: var(--copper); }
   border-bottom: 1px solid var(--line);
   display: flex;
   flex-direction: column;
-  background: #1a1b19;
+  background: #fafaf8;
 }
-.project-card p { color: #c5c0b4; }
+.project-card p { color: #5e645b; }
 .project-card .tags { margin-top: auto; padding-top: 18px; }
 .project-card > a {
   margin-top: 20px;
@@ -177,7 +177,7 @@ h1 span { color: var(--copper); }
   text-decoration: none;
   color: var(--copper);
 }
-.project-card > a:hover { color: #e49a6c; }
+.project-card > a:hover { color: #596b56; }
 .muted-card { background: var(--charcoal-2); }
 .split-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; }
 .split-section .section-head { display: block; }
@@ -185,7 +185,7 @@ h1 span { color: var(--copper); }
 .timeline article { border-top: 1px solid var(--paper); padding: 25px 0 40px; }
 .timeline h3 { font-size: 27px; margin: 8px 0 0; color: var(--ink); }
 .timeline h4 { margin: 2px 0 16px; color: var(--copper); font-weight: 500; }
-.timeline p { max-width: 650px; color: #c5c0b4; }
+.timeline p { max-width: 650px; color: #5e645b; }
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -197,11 +197,11 @@ h1 span { color: var(--copper); }
   padding: 25px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: #191a18;
+  background: #f8f9f6;
 }
 .skill-grid > div:nth-child(2n) { background: var(--charcoal-2); }
 .skill-grid h3 { font-size: 17px; margin: 0 0 18px; color: var(--ink); }
-.skill-grid p { font: 400 12px/1.8 DM Mono, monospace; color: #b8b3a8; }
+.skill-grid p { font: 400 12px/1.8 DM Mono, monospace; color: #60675d; }
 .about-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 90px; }
 .about-grid > p { font-size: 20px; margin: 0; color: var(--paper); }
 .education { display: grid; gap: 24px; }
